@@ -1,0 +1,10 @@
+kova/
+├── src/
+│   ├── components/
+│   ├── context/
+│   ├── pages/
+│   ├── firebase.js
+│   └── main.jsx
+├── index.html
+├── package.json
+└── vite.config.js

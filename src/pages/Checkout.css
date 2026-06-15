@@ -1,0 +1,91 @@
+.checkout-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  align-items: start;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkout-form h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.checkout-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.fake-payment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.fake-payment p { font-size: 0.875rem; font-weight: 500; }
+.fake-payment__note { font-size: 0.78rem; color: var(--text-muted); }
+
+.checkout-summary {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkout-summary h2 { font-size: 1rem; font-weight: 600; }
+
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.checkout-item__qty { color: var(--text-muted); }
+
+.checkout-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.checkout-success {
+  text-align: center;
+  padding: 80px 24px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.checkout-success__icon { font-size: 3rem; margin-bottom: 20px; }
+.checkout-success h2 { font-size: 1.4rem; font-weight: 600; margin-bottom: 12px; }
+.checkout-success p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 8px; }
+.checkout-success__sub { margin-bottom: 28px !important; }
+
+@media (max-width: 768px) {
+  .checkout-layout { grid-template-columns: 1fr; }
+  .checkout-summary { position: static; }
+  .checkout-row { grid-template-columns: 1fr; }
+}

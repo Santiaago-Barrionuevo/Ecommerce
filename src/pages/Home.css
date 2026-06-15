@@ -1,0 +1,108 @@
+.hero {
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+  padding: 80px 0;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.hero__title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  max-width: 380px;
+}
+
+.hero__visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  height: 280px;
+}
+
+.hero__block {
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.hero__block--dark { background: var(--text); grid-row: 1 / 3; }
+.hero__block--light { background: var(--border); }
+.hero__block--mid { background: #e8e8e4; }
+
+.section-pad { padding: 64px 0; }
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.section-header .section-title { margin-bottom: 0; }
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--trans), box-shadow var(--trans);
+  text-align: center;
+}
+
+.cat-card:hover { border-color: var(--accent); box-shadow: var(--shadow); }
+
+.cat-card__icon { font-size: 1.8rem; }
+.cat-card__name { font-size: 0.875rem; font-weight: 500; }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__visual { display: none; }
+  .categories__grid { grid-template-columns: repeat(2, 1fr); }
+}
